@@ -1,0 +1,371 @@
+* {/*reset de propriedades*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: grey;
+    background-image: url("../zup.com.br.estrelas.finance.img/stars-photo-3934512.jpeg");
+}
+p{
+    color: white;
+}
+
+/* mobile first*/
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    height: 60px;
+    padding: 5px 10px 0;
+    background-color: black;
+}
+
+header i {
+    color: midnightblue;
+    font-size: 30px;
+}
+
+header img {
+    width: 97px;
+    height: 55px;
+    margin-right: calc(50% - 48.5px );
+}
+
+header #mostra-esconde {
+    display: none;
+}
+
+header #mostra-esconde:checked ~ nav {
+    left: 0;
+}
+
+header nav {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+
+    width: 100%;  
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: black;
+    transition: left 0.4s;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 30px;
+    width: 90%;
+    text-align: center;
+}
+
+header nav a:hover {
+    background-color: orangered;
+    padding-left: 5px;
+}
+
+/* main */
+main{
+    padding: 0 10px;
+
+}
+
+#principal {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px dotted grey;
+}
+
+#principal figure {
+    display: flex;
+    justify-content: center;
+}
+
+#principal figure img {
+    height: 168px;
+    margin-left: -23px;/*correção na margem à esquerda*/
+}
+
+#principal article h1 {
+    margin-top: 20px;
+    color: orangered;
+    font-size: 24px;
+}
+
+#principal article p {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 100;
+    width: 95%;
+}
+
+
+#principal article a {
+    border: 1px solid orangered;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: orangered;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 100;
+}
+
+
+/****************** PRODUTOS *************/
+#produtos {
+    margin-top: 20px;
+}
+
+#produtos article {
+    /* border-width: 1px;
+    border-style: solid;
+    border-color: grey; */
+    /*short line*/
+    border: 1px solid gray;
+
+}
+
+#produtos article h2 {
+    padding: 10px 5px;
+    background-color: orangered;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+}
+
+#produtos article img {
+    float: left;
+    margin: 10px;
+    width: 60px;
+}
+
+#produtos article p {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/****************** FOOTER ******************/
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: black;
+    color: grey;
+}
+
+footer img {
+    float: left;
+    width: 30px;
+    margin-top: -25px;
+}
+
+footer p {
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+ 
+    /************** HEADER *************/
+    header {
+        height: 80px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+    
+    header i {
+        font-size: 40px;
+    }
+
+    header img {
+        width: 132px;
+        height: 75px;
+        margin-right: calc(50% - 66px );
+    }
+
+    header nav {
+        top: 80px;
+    }
+
+    header nav a {
+        font-size: 25px;
+        line-height: 45px;
+    }
+
+/************** MAIN *************/
+
+    #principal figure img {
+        height: 350px;
+        margin-left: -65px;
+    }
+
+    #principal article h1 {
+        font-size: 50px;
+    }
+
+    #principal article p {
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    #principal article a {
+        padding: 20px 35px;
+        font-size: 22px;
+    }
+
+    #produtos article h2 {
+      
+        font-size: 30px;
+    }
+
+    #produtos article p {
+        padding: 15px;
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    #produtos article img {
+        margin: 15px;
+        width: 80px;
+    }
+    
+    /* footer */
+    footer {
+        margin-top: 25px;
+        padding: 15px;
+    }
+
+    footer img {
+        width: 40px;
+        margin-top: -36px;
+    }
+
+    footer p {
+        padding: 15px 0px;
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    
+
+    header {
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 10% 10px;
+        height: auto;
+    }
+    header label { display: none; }
+
+    header img {
+        width: 100px;
+        height: 65px;
+        margin-top: 10px;
+        margin-right: auto;
+    }
+
+    header nav {
+        position: static;
+        flex-direction: row;
+        width: 70%;
+        padding: 0;
+        /* border: 1px solid white; */
+    }
+
+    header nav a {
+        width: auto;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 35px 20px 20px;
+    }
+
+    header nav a:hover {
+        background-color: orangered;
+        padding-left: 20px;
+        border-radius: 0 0 10px 10px;
+        
+    }
+
+    #principal {
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 10% 0;
+    }
+
+    #principal figure { width: 50%; }
+
+    #principal figure img {
+        height: 250px;
+        margin-left: -45px;
+    }
+
+    #principal article {
+        width: 40%;
+    }
+
+    #principal article h1 {
+        font-size: 28px;
+    }
+
+    #principal article p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    #principal article a {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+
+    #produtos {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10%;
+    }
+
+    #produtos article {
+        width: 30%;
+    }
+
+    #produtos article h2 {
+        font-size: 18px;
+    }
+
+    #produtos article img {
+        width: 45px;
+        margin: 10px;
+    }
+
+    #produtos article p {
+        font-size: 14px;
+        padding: 10px;
+        line-height: 18px;
+    }
+}
+
+
+/* Telas largas */
+@media screen and ( min-width: 1200px ){
+    #container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
